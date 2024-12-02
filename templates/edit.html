@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit OOTD</title>
+</head>
+<body>
+    <h1>Edit Outfit</h1>
+    <form method="POST">
+        <label>Weather: <input type="text" name="weather" value="{{ ootd.weather }}" required></label><br>
+        <label>Clothes: <input type="text" name="clothes" value="{{ ootd.clothes }}" required></label><br>
+        <label>Tone: <input type="text" name="tone" value="{{ ootd.tone }}" required></label><br>
+        <button type="submit">Save</button>
+    </form>
+    <a href="/">Back to OOTD List</a>
+</body>
+</html>

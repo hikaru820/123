@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OOTD List</title>
+</head>
+<body>
+    <h1>Today's Outfit of the Day</h1>
+    <form action="/input_weather" method="GET">
+        <button type="submit">Input Weather</button>
+    </form>
+    <ul>
+        {% for ootd in ootds %}
+        <li>
+            <p>Weather: {{ ootd.weather }}</p>
+            <p>Clothes: {{ ootd.clothes }}</p>
+            <p>Tone: {{ ootd.tone }}</p>
+            <a href="/edit/{{ ootd.id }}">Edit</a>
+            <a href="/exchange/{{ ootd.id }}">Exchange Tone</a>
+        </li>
+        {% endfor %}
+    </ul>
+    <a href="/new">Add New OOTD</a>
+</body>
+</html>
